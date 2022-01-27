@@ -1,22 +1,5 @@
 package ru.stqa.pft.sandbox;
-
-public class Point {
-  private double x;
-  private double y;
-
-  public static double distance(Point p1, Point p2) {
-    double square1 = Math.pow(p1.x-p2.x,2);
-    double square2 = Math.pow(p1.y-p2.y,2);
-    double result = Math.sqrt(square1 + square2);
-    return result;
-  }
-  public double distance(Point other){
-    double square1 = Math.pow(this.x-other.x,2);
-    double square2 = Math.pow(this.y-other.y,2);
-    double result = Math.sqrt(square1 + square2);
-    return result;
-  }
-
+class main {
   public static void main(String[] args) {
     Point point1 = new Point();
     point1.x = 0;
@@ -31,4 +14,25 @@ public class Point {
     assert result == 5.0;
     System.out.println(result);
   }
+}
+public class Point {
+  public double x;
+  public double y;
+
+
+
+  public static double distance(Point p1, Point p2) {
+    double square1 = Math.pow(p1.x-p2.x,2);
+    double square2 = Math.pow(p1.y-p2.y,2);
+    double result = Math.sqrt(square1 + square2);
+    return result;
+  }
+  public double distance(Point other){
+    double square1 = Math.pow(this.x-other.x,2);
+    double square2 = Math.pow(this.y-other.y,2);
+    double result = Math.sqrt(square1 + square2);
+    return result;
+  }
+
+
 }
