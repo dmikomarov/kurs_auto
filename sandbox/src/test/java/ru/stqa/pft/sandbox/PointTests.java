@@ -3,7 +3,7 @@ package ru.stqa.pft.sandbox;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SquareTests {
+public class PointTests {
 @Test
   public void testArea() {
   Point point1 = new Point(0, 0);
