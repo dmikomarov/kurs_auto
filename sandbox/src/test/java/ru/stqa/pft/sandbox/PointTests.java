@@ -1,29 +1,24 @@
 package ru.stqa.pft.sandbox;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PointTests {
-@Test
-  public void testArea() {
-  Point point1 = new Point(0, 0);
-  Point point2 = new Point(3, 4);
-  double result = Point.distance(point1, point2);
-  System.out.println(result);
-  Assert.assertEquals(result, 5.0);
-  result = point1.distance(point2);
-  Assert.assertEquals(result, 5.0);
-  System.out.println(result);
-  }
+  private static final Point POINT_1 = new Point(0, 0);;
+  private static final Point POINT_2 = new Point(3, 4);;
+  private static final int EXPECTED_DISTANCE = 5;
+
+
   @Test
-  public void testArea1() {
-    Point point1 = new Point(0, 0);
-    Point point2 = new Point(3, 3);
-    double result = Point.distance(point1, point2);
+  void testStatic() {
+    double result = Point.distance(POINT_1, POINT_2);
     System.out.println(result);
-    Assert.assertEquals(result, 5.0);
-    result = point1.distance(point2);
-    Assert.assertEquals(result, 5.0);
-    System.out.println(result);
+    Assert.assertEquals(result, EXPECTED_DISTANCE);
+  }
+
+  @Test
+  void testObject() {
+    Assert.assertEquals(POINT_1.distance(POINT_2), EXPECTED_DISTANCE);
   }
 }
