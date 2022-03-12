@@ -14,7 +14,7 @@ public class GroupCreationTests {
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
-    System.setProperty("webdriver.chrome.driver", "C:/kurs_auto/addressbook-web-tests/chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "C:/kurs_auto/addressbook-web-tests-dz-contacts/chromedriver.exe");
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     js = (JavascriptExecutor) wd;
